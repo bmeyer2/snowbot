@@ -22,7 +22,7 @@ end
 
 function move()
 
-	inventory:useItem(16829,10) --Tonneau d'Huile a frire--
+	del_temp_items()
 
 	return {
 		{map = "192415750", path = "409"}, --Interieur banque Astrub vers Sortie--
@@ -85,7 +85,71 @@ function move()
 end
 
 function bank()
+
+	del_temp_items()
 	
+	return {
+		{map = "3,-21", path = "right"},
+		{map = "4,-21", path = "bottom"},
+		{map = "5,-21", path = "left"},
+		{map = "6,-21", path = "left"},
+		{map = "7,-21", path = "left"},
+		
+		{map = "3,-20", path = "right"},
+		{map = "4,-20", path = "bottom"},
+		{map = "5,-20", path = "left"},
+		{map = "6,-20", path = "left"},
+		{map = "7,-20", path = "left"},
+		
+		{map = "1,-19", path = "right"},
+		{map = "2,-19", path = "bottom"},
+		{map = "3,-19", path = "right"},
+		{map = "4,-19", path = "bottom"},
+		{map = "5,-19", path = "left"},
+		{map = "6,-19", path = "left"},
+		{map = "7,-19", path = "bottom"},
+		
+		{map = "1,-18", path = "right"},
+		{map = "2,-18", path = "right"},
+		{map = "3,-18", path = "right"},
+		{map = "191104002", door = "288"}, --Exterieur banque Astrub vers Interieur--
+		{map = "192415750", path = "424", custom = hiboux}, --Interieur banque Astrub vidage items--
+		{map = "5,-18", path = "left"}, --Zaap Astrub--
+		{map = "6,-18", path = "bottom"},
+		{map = "7,-18", path = "left"},
+		
+		{map = "1,-17", path = "right"},
+		{map = "2,-17", path = "top"},
+		{map = "3,-17", path = "right"},
+		{map = "4,-17", path = "top"},
+		{map = "5,-17", path = "left"},
+		{map = "6,-17", path = "left"},
+		{map = "7,-17", path = "top"},
+		
+		{map = "1,-16", path = "top"},
+		{map = "2,-16", path = "top"},
+		{map = "3,-16", path = "left"},
+		{map = "4,-16", path = "right"},
+		{map = "5,-16", path = "top"},
+		{map = "6,-16", path = "left"},
+		{map = "7,-16", path = "left"},
+		
+		{map = "1,-15", path = "top"},
+		{map = "2,-15", path = "top"},
+		{map = "3,-15", path = "top"},
+		{map = "4,-15", path = "top"},
+		{map = "5,-15", path = "top"},
+		{map = "6,-15", path = "top"},
+		{map = "7,-15", path = "top"},
+	}
+end
+
+function phenix()
+	return {
+	}
+end
+
+function del_temp_items()
 	inventory:useItem(16829,10) --Tonneau d'Huile a frire--
 	inventory:deleteItem(8226,10)
 	inventory:deleteItem(2416,10)
@@ -181,64 +245,4 @@ function bank()
 	inventory:deleteItem(8213,10)
 	inventory:deleteItem(373,10)
 	inventory:deleteItem(1528,10)
-	
-	return {
-		{map = "3,-21", path = "right"},
-		{map = "4,-21", path = "bottom"},
-		{map = "5,-21", path = "left"},
-		{map = "6,-21", path = "left"},
-		{map = "7,-21", path = "left"},
-		
-		{map = "3,-20", path = "right"},
-		{map = "4,-20", path = "bottom"},
-		{map = "5,-20", path = "left"},
-		{map = "6,-20", path = "left"},
-		{map = "7,-20", path = "left"},
-		
-		{map = "1,-19", path = "right"},
-		{map = "2,-19", path = "bottom"},
-		{map = "3,-19", path = "right"},
-		{map = "4,-19", path = "bottom"},
-		{map = "5,-19", path = "left"},
-		{map = "6,-19", path = "left"},
-		{map = "7,-19", path = "bottom"},
-		
-		{map = "1,-18", path = "right"},
-		{map = "2,-18", path = "right"},
-		{map = "3,-18", path = "right"},
-		{map = "191104002", door = "288"}, --Exterieur banque Astrub vers Interieur--
-		{map = "192415750", path = "424", custom = hiboux}, --Interieur banque Astrub vidage items--
-		{map = "5,-18", path = "left"}, --Zaap Astrub--
-		{map = "6,-18", path = "bottom"},
-		{map = "7,-18", path = "left"},
-		
-		{map = "1,-17", path = "right"},
-		{map = "2,-17", path = "top"},
-		{map = "3,-17", path = "right"},
-		{map = "4,-17", path = "top"},
-		{map = "5,-17", path = "left"},
-		{map = "6,-17", path = "left"},
-		{map = "7,-17", path = "top"},
-		
-		{map = "1,-16", path = "top"},
-		{map = "2,-16", path = "top"},
-		{map = "3,-16", path = "left"},
-		{map = "4,-16", path = "right"},
-		{map = "5,-16", path = "top"},
-		{map = "6,-16", path = "left"},
-		{map = "7,-16", path = "left"},
-		
-		{map = "1,-15", path = "top"},
-		{map = "2,-15", path = "top"},
-		{map = "3,-15", path = "top"},
-		{map = "4,-15", path = "top"},
-		{map = "5,-15", path = "top"},
-		{map = "6,-15", path = "top"},
-		{map = "7,-15", path = "top"},
-	}
-end
-
-function phenix()
-	return {
-	}
 end
