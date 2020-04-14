@@ -22,6 +22,7 @@ end
 
 function move()
 	return {
+		{map = map:currentMap(), path = "havenbag"}, --Hors du chemin--
 		{map = "99095051", path = "410"}, --Interieur banque Amakna vers Sortie--
 		{map = "88081177", path = "bottom"},
 		{map = "2,-1", path = "left"},
@@ -154,12 +155,13 @@ function move()
 		{map = "4,0", path = "left"},
 		{map = "3,0", path = "left", gather = true},
 		{map = "2,0", path = "top", door = "355" , gather = true},
-		{map = map:currentMap(), custom = lost},
+		{map = "162791424", path = "zaap(88213271)"},
 	}
 end
 	
 function bank()
 	return {
+		{map = map:currentMap(), path = "havenbag"},
 		{map = "-2,0", path = "right"},
 		{map = "-1,0", path = "top"},
 		{map = "-1,-1", path = "right"},
@@ -169,16 +171,8 @@ function bank()
 		{map = "162791424", path = "zaap(88213271)"},		
 		{map = "88081177", door = "216"},
 		{map = "99095051", path = "316", custom = hiboux}, --Banque Amakna--
-		{map = map:currentMap(), path = "havenbag"},
 	}
 end
-
-function lost()
-	return {
-		{map = "162791424", path = "zaap(88213271)"},	
-		{map = map:currentMap(), path = "havenbag"},
-	}
-end	
 
 function phenix()
 	return {
