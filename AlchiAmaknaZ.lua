@@ -35,7 +35,7 @@ function move()
 		{map = "-3,0", path = "right", gather = true},
 		{map = "-2,0", path = "right", gather = true},
 		{map = "-1,0", path = "right", door = "272" , gather = true},
-		{map = "0,0", path = "bottom"},
+		{map = "88212247", path = "bottom"}, --0,0--
 		{map = "0,1", path = "left"},
 		{map = "-1,1", path = "left", gather = true},
 		{map = "-2,1", path = "bottom"},
@@ -166,7 +166,7 @@ function bank()
 		{map = "0,-1", path = "right"},
 		{map = "1,-1", path = "right"},
 		{map = "2,-1", path = "top"},
-		{map = "0,0", path = "zaap(88213271)"},		
+		{map = "162791424", path = "zaap(88213271)"},		
 		{map = "88081177", door = "216"},
 		{map = "99095051", path = "316", custom = hiboux}, --Banque Amakna--
 		{map = map:currentMap(), path = "havenbag"},
@@ -175,7 +175,7 @@ end
 
 function lost()
 	return {
-		{map = "0,0", path = "zaap(88213271)"},	
+		{map = "162791424", path = "zaap(88213271)"},	
 		{map = map:currentMap(), path = "havenbag"},
 	}
 end	
